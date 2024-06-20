@@ -4,7 +4,7 @@ This guide walks you through creating a movie recommender system using a Kaggle 
 
 ## Step 1: Import Libraries and Load Dataset
 
-First, import the necessary libraries and load the dataset from Kaggle.
+First,, import the necessary libraries and load the dataset from Kaggle.
 
 1. **Import Required Libraries**: Ensure you have libraries like `pandas` and `sklearn` installed.
 2. **Load the Dataset**: Read the dataset from a CSV file into a pandas DataFrame.
