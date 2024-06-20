@@ -1,6 +1,6 @@
 import streamlit as st
-import pickle
 import requests
+import pandas as pd
 
 def fetch_poster(movie_id):
     base_url = "https://api.themoviedb.org/3/movie/{}?api_key=7266fceaa3fcd0262aee13a32a854a22"
@@ -11,9 +11,9 @@ def fetch_poster(movie_id):
     full_url = "https://image.tmdb.org/t/p/w500" + poster_path
     return full_url
 
-movies = pickle.load(open("movies_list.pkl", 'rb'))
-similarity = pickle.load(open("similarity.pkl", 'rb'))
-movies_list=movies['title'].values
+movies = pd.read_pickle("movies_list.pkl")
+similarity = pd.read_pickle("similarity.pkl")
+movies_list = movies['title'].values
 
 st.header("Movie Recommender System")
 selectvalue=st.selectbox("Select movie from dropdown", movies_list)
